@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FitZone Gym{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">Transform Your Body, Transform Your Life</h1>
+            <p class="hero-subtitle">Join FitZone Gym and start your fitness journey today with professional trainers and state-of-the-art equipment</p>
+            <a href="{{ url_for('membership') }}" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<!-- Highlights Section -->
+<section class="highlights">
+    <div class="container">
+        <h2 class="section-title">Why Choose FitZone?</h2>
+        
+        <div class="highlight-grid">
+            <!-- Highlight Card 1 -->
+            <div class="highlight-card">
+                <div class="icon">🏋️</div>
+                <h3>Modern Equipment</h3>
+                <p>Access to the latest fitness equipment and technology to maximize your workout results</p>
+            </div>
+            
+            <!-- Highlight Card 2 -->
+            <div class="highlight-card">
+                <div class="icon">👨‍🏫</div>
+                <h3>Professional Trainers</h3>
+                <p>Certified trainers with years of experience to guide you through your fitness journey</p>
+            </div>
+            
+            <!-- Highlight Card 3 -->
+            <div class="highlight-card">
+                <div class="icon">⏰</div>
+                <h3>Flexible Timings</h3>
+                <p>Open early morning to late night, 7 days a week for your convenience</p>
+            </div>
+            
+            <!-- Highlight Card 4 -->
+            <div class="highlight-card">
+                <div class="icon">🥗</div>
+                <h3>Nutrition Support</h3>
+                <p>Personalized diet plans and nutrition counseling to complement your training</p>
+            </div>
+            
+            <!-- Highlight Card 5 -->
+            <div class="highlight-card">
+                <div class="icon">🧘</div>
+                <h3>Diverse Classes</h3>
+                <p>Yoga, Zumba, CrossFit, and more group classes to keep you motivated</p>
+            </div>
+            
+            <!-- Highlight Card 6 -->
+            <div class="highlight-card">
+                <div class="icon">🏆</div>
+                <h3>Results Guaranteed</h3>
+                <p>Proven training methods and tracking systems to help you achieve your goals</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Start Your Fitness Journey?</h2>
+        <p>Join thousands of members who have transformed their lives at FitZone Gym</p>
+        <a href="{{ url_for('membership') }}" class="btn btn-secondary">View Membership Plans</a>
+    </div>
+</section>
+{% endblock %}

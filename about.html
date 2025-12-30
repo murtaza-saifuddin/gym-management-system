@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - FitZone Gym{% endblock %}
+
+{% block content %}
+<!-- About Header with Background Image -->
+<section class="page-header about-header">
+    <div class="container">
+        <h1>About FitZone Gym</h1>
+        <p>Your partner in achieving fitness excellence</p>
+    </div>
+</section>
+
+<!-- Mission & Vision Section -->
+<section class="mission-vision">
+    <div class="container">
+        <div class="content-grid">
+            <!-- Mission -->
+            <div class="content-box">
+                <h2>🎯 Our Mission</h2>
+                <p>To empower individuals to achieve their fitness goals through personalized training, state-of-the-art facilities, and a supportive community. We believe that everyone deserves access to quality fitness resources and expert guidance.</p>
+            </div>
+            
+            <!-- Vision -->
+            <div class="content-box">
+                <h2>👁️ Our Vision</h2>
+                <p>To become the leading fitness destination that transforms lives through innovative training methods, cutting-edge equipment, and a holistic approach to health and wellness. We envision a healthier, stronger community.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team">
+    <div class="container">
+        <h2 class="section-title">Meet Our Expert Team</h2>
+        <p class="section-subtitle">Certified professionals dedicated to your success</p>
+        
+        <div class="team-grid">
+            {% for member in team %}
+            <!-- Team Member Card -->
+            <div class="team-card">
+                <div class="team-icon">👤</div>
+                <h3>{{ member.name }}</h3>
+                <p class="role">{{ member.role }}</p>
+                <p class="specialty">{{ member.specialty }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Facilities Section -->
+<section class="facilities">
+    <div class="container">
+        <h2 class="section-title">Our Facilities</h2>
+        
+        <div class="facilities-grid">
+            <!-- Facility Item 1 -->
+            <div class="facility-item">
+                <div class="facility-icon">🏋️‍♂️</div>
+                <h3>Weight Training Area</h3>
+                <p>Extensive free weights, machines, and functional training equipment</p>
+            </div>
+            
+            <!-- Facility Item 2 -->
+            <div class="facility-item">
+                <div class="facility-icon">🏃</div>
+                <h3>Cardio Zone</h3>
+                <p>Latest treadmills, ellipticals, bikes, and rowing machines</p>
+            </div>
+            
+            <!-- Facility Item 3 -->
+            <div class="facility-item">
+                <div class="facility-icon">🧘‍♀️</div>
+                <h3>Group Class Studios</h3>
+                <p>Spacious studios for yoga, dance, aerobics, and more</p>
+            </div>
+            
+            <!-- Facility Item 4 -->
+            <div class="facility-item">
+                <div class="facility-icon">🚿</div>
+                <h3>Locker Rooms</h3>
+                <p>Clean, modern locker rooms with showers and amenities</p>
+            </div>
+            
+            <!-- Facility Item 5 -->
+            <div class="facility-item">
+                <div class="facility-icon">💆</div>
+                <h3>Recovery Zone</h3>
+                <p>Steam rooms, saunas, and massage therapy areas</p>
+            </div>
+            
+            <!-- Facility Item 6 -->
+            <div class="facility-item">
+                <div class="facility-icon">☕</div>
+                <h3>Juice Bar</h3>
+                <p>Healthy smoothies, protein shakes, and refreshments</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Environment Section -->
+<section class="environment">
+    <div class="container">
+        <h2 class="section-title">Our Environment</h2>
+        <div class="environment-content">
+            <p>At FitZone Gym, we've created an environment that motivates and inspires. Our facility features:</p>
+            <ul class="environment-list">
+                <li>✓ Climate-controlled workout areas for year-round comfort</li>
+                <li>✓ Natural lighting and ventilation systems</li>
+                <li>✓ Motivational music and energetic atmosphere</li>
+                <li>✓ Clean and sanitized equipment maintained daily</li>
+                <li>✓ Friendly staff always ready to assist</li>
+                <li>✓ Safe and welcoming space for all fitness levels</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

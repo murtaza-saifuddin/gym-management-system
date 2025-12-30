@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Membership Plans - FitZone Gym{% endblock %}
+
+{% block content %}
+<!-- Membership Header with Background Image -->
+<section class="page-header membership-header">
+    <div class="container">
+        <h1>Membership Plans</h1>
+        <p>Choose the perfect plan for your fitness goals</p>
+    </div>
+</section>
+
+<!-- Membership Plans Section -->
+<section class="membership-plans">
+    <div class="container">
+        <div class="plans-grid">
+            {% for plan in plans %}
+            <!-- Membership Plan Card -->
+            <div class="plan-card {% if plan.popular %}popular{% endif %}">
+                {% if plan.popular %}
+                <div class="popular-badge">Most Popular</div>
+                {% endif %}
+                
+                <h2 class="plan-name">{{ plan.name }}</h2>
+                
+                <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">{{ plan.price }}</span>
+                    <span class="duration">/{{ plan.duration }}</span>
+                </div>
+                
+                <ul class="plan-features">
+                    {% for feature in plan.features %}
+                    <li>✓ {{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                
+                <button class="btn {% if plan.popular %}btn-primary{% else %}btn-secondary{% endif %}">
+                    Choose {{ plan.name }}
+                </button>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Additional Benefits Section -->
+<section class="benefits">
+    <div class="container">
+        <h2 class="section-title">All Members Enjoy</h2>
+        
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">🔒</div>
+                <h3>Secure Lockers</h3>
+                <p>Personal lockers with 24/7 security</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">📱</div>
+                <h3>Mobile App Access</h3>
+                <p>Track workouts and book classes</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">🎵</div>
+                <h3>Premium Music</h3>
+                <p>Energizing playlists to keep you motivated</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">🌐</div>
+                <h3>Free WiFi</h3>
+                <p>Stay connected during your workout</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">🚗</div>
+                <h3>Free Parking</h3>
+                <p>Ample parking space for all members</p>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">❄️</div>
+                <h3>Climate Control</h3>
+                <p>Comfortable temperature year-round</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+    <div class="container">
+        <h2>Start Your Fitness Journey Today</h2>
+        <p>No joining fee for new members this month!</p>
+        <button class="btn btn-primary">Contact Us Now</button>
+    </div>
+</section>
+{% endblock %}
